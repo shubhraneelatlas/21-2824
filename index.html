@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Font-style CDN link -->
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <!-- custom css for reset -style start -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- custom css for reset -style end -->
+    <!-- script file for custom logic bilding start -->
+    <script src="./script.js" defer></script>
+    <!-- script file for custom logic bilding End -->
+  </head>
+
+  <body>
+    <div class="container pt-4">
+      <div class="row">
+        <div class="col-12" style=" margin-bottom: 90px">
+          <div class="checkbox-wrapper">
+            <div class="All-filter">
+              <input type="checkbox" id="All" name="All" value="All" checked/>
+              <label for="All">All</label>
+            </div>
+            <div class="creator-filter">
+              <input type="checkbox" id="creator" name="Value creator" value="Value creator" />
+              <label for="creator">Value creator&nbsp;&nbsp;<img class="info" data-bs-toggle="popover" data-bs-trigger="hover focus click" data-bs-content="These are topics that are central to long term value creation and working with them should help position Atlas Copco as a leader within sustainaibility. Our ambition level is expressed through our goals, targets and KPI’s" tabindex="0" data-bs-placement="bottom" src="./Assets/i.png"></label>
+            </div>
+            <div class="trust-filter">
+                <input type="checkbox" id="trust" name="Trust builder" value="Trust builder" />
+                <label for="trust">Trust builders&nbsp;&nbsp;<img class="info"  data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Working with these topics help built trust in Atlas Copco’s business.Our ambition is to deliver transparency and to keep pace with stakeholders expectations. " tabindex="0" data-bs-placement="bottom" src="./Assets/i.png"></label>
+              </div>
+              <div class="strategic-filter">
+                <input type="checkbox" id="strategic" name="Strategic enablers" value="Strategic enablers" />
+                <label for="strategic">Strategic enablers&nbsp;&nbsp;<img class="info"  data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="These are the topics that play a central role to delivering on Atlas Copco’s business strategy.Working with them should build and ensure business resilience. " tabindex="0" data-bs-placement="bottom" src="./Assets/i.png"></label>
+              </div>
+              <div class="material-filter">
+                <input type="checkbox" id="material" name="material" value="material" />
+                <label for="material">Less material for 2022-'24</label>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-start">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+          <div class="chart-wrapper">
+            <img
+              style="visibility: hidden"
+              src="./Assets/Elongated_graph.png"
+              class="img-fluid"
+            />
+            <div class="chart-axis">
+              <div class="overlay-column">
+                <div class="dotted-border">10</div>
+                <div class="dotted-border">20</div>
+                <div class="dotted-border">30</div>
+                <div class="dotted-border">40</div>
+                <div class="dotted-border">50</div>
+                <div class="dotted-border">60</div>
+                <div class="dotted-border">70</div>
+                <div class="dotted-border">80</div>
+                <div class="dotted-border">90</div>
+                <div class="dotted-border">100</div>
+              </div>
+              <div class="overlay-row">
+                <div class="dotted-border"><span class="numberY">10</span></div>
+                <div class="dotted-border"><span class="numberY">20</span></div>
+                <div class="dotted-border"><span class="numberY">30</span></div>
+                <div class="dotted-border"><span class="numberY">40</span></div>
+                <div class="dotted-border"><span class="numberY">50</span></div>
+                <div class="dotted-border"><span class="numberY">60</span></div>
+                <div class="dotted-border"><span class="numberY">70</span></div>
+                <div class="dotted-border"><span class="numberY">80</span></div>
+                <div class="dotted-border"><span class="numberY">90</span></div>
+                <div class="dotted-border">
+                  <span class="numberY">100</span>
+                </div>
+              </div>
+            </div>
+            <div class="chart">
+              <div class="overlay-column">
+                <div class="dotted-border"></div>
+                <div class="dotted-border"></div>
+                <div class="dotted-border"></div>
+                <div class="dotted-border"></div>
+                <div class="dotted-border"></div>
+                <div class="dotted-border"></div>
+                <div class="dotted-border"></div>
+                <div class="dotted-border"></div>
+                <div class="dotted-border"></div>
+                <div class="dotted-border"></div>
+              </div>
+
+              <div class="overlay-row">
+                <div class="dotted-border"></div>
+                <div class="dotted-border"></div>
+                <div class="dotted-border"></div>
+                <div class="dotted-border"></div>
+                <div class="dotted-border"></div>
+                <div class="dotted-border"></div>
+                <div class="dotted-border"></div>
+                <div class="dotted-border"></div>
+                <div class="dotted-border"></div>
+                <div class="dotted-border"></div>
+              </div>
+
+              <div class="overlay-points">
+                <span class="creator"
+                  data-id="id1"
+                  style="position: absolute; bottom: 89%; left: 72%"
+                  ><img src="./Assets/1.png"
+                /></span>
+                <span class="creator"
+                  data-id="id2"
+                  style="position: absolute; bottom: 85%; left: 89%"
+                  ><img src="./Assets/2.png"
+                /></span>
+                <span class="creator"
+                  data-id="id3"
+                  style="position: absolute; bottom: 81%; left: 90%"
+                  ><img src="./Assets/3.png"
+                /></span>
+                <span class="creator goRight"
+                  data-id="id4"
+                  style="position: absolute; bottom: 82%; left: 76%"
+                 
+                  ><img src="./Assets/4_new.png"
+                /></span>
+                <span class="creator"
+                  data-id="id5"
+                  style="position: absolute; bottom: 78%; left: 76%"
+                  ><img src="./Assets/5_new.png"
+                /></span>
+
+                <span class="trust"
+                  data-id="id6"
+                  style="position: absolute; bottom: 70%; left: 68%"
+                  ><img src="./Assets/6.png"
+                /></span>
+                <span class="trust"
+                  data-id="id7"
+                  style="position: absolute; bottom: 68%; left: 72%"
+                  ><img src="./Assets/7_new.png"
+                /></span>
+                <span class="trust"
+                  data-id="id8"
+                  style="position: absolute; bottom: 64%; left: 75%"
+                  ><img src="./Assets/8.png"
+                /></span>
+                <span class="trust"
+                  data-id="id9"
+                  style="position: absolute; bottom: 60%; left: 61%"
+                  ><img src="./Assets/9_new.png"
+                /></span>
+                <span class="trust goTop"
+                  data-id="id10"
+                  style="position: absolute; bottom: 57%; left: 67%"
+                  
+                  ><img src="./Assets/10_new.png"
+                /></span>
+
+                <span class="strategic"
+                  data-id="id11"
+                  style="position: absolute; bottom: 70%; left: 94%"
+                  ><img src="./Assets/11_new.png"
+                /></span>
+                <span class="strategic"
+                  data-id="id12"
+                  style="position: absolute; bottom: 63%; left: 96%"
+                  ><img src="./Assets/12_new.png"
+                /></span>
+                <span class="strategic"
+                  data-id="id13"
+                  style="position: absolute; bottom: 63%; left: 85%"
+                  ><img src="./Assets/13_new.png"
+                /></span>
+                <span class="strategic"
+                  data-id="id14"
+                  style="position: absolute; bottom: 56%; left: 85%"
+                  ><img src="./Assets/14_new.png"
+                /></span>
+                <span class="material"
+                  data-id="id15"
+                  style="position: absolute; bottom: 62%; left: 39%"
+                  ><img src="./Assets/15.png"
+                /></span>
+
+                <span class="material"
+                  data-id="id16,id20"
+                  style="position: absolute; bottom: 61%; left: 49%"
+                  ><img src="./Assets/16_20.png"
+                /></span>
+                <span class="material"
+                  data-id="id17"
+                  style="position: absolute; bottom: 50%; left: 61%"
+                  ><img src="./Assets/17.png"
+                /></span>
+                <span class="material"
+                  data-id="id18"
+                  style="position: absolute; bottom: 50%; left: 68%"
+                  ><img src="./Assets/18.png"
+                /></span>
+                <span class="material"
+                  data-id="id19"
+                  style="position: absolute; bottom: 42%; left: 61%"
+                  ><img src="./Assets/19_new.png"
+                /></span>
+                <!-- <span data-id="id5" style="position: absolute; bottom: 17%; left: 27%"><img src="./Assets/20.png"/></span> -->
+
+                <span class="material"
+                  data-id="id21"
+                  style="position: absolute; bottom: 38%; left: 38%"
+                  ><img src="./Assets/21.png"
+                /></span>
+                <span class="material"
+                  data-id="id22"
+                  style="position: absolute; bottom: 34%; left: 42%"
+                  ><img src="./Assets/22_new.png"
+                /></span>
+              </div>
+              <span class="markerBorder"></span>
+            </div>
+            <h3 class="hori-text">
+              Atlas Copco's economic, social and environmental impact
+            </h3>
+            <h3 class="vert-text">Importance to stakeholders</h3>
+          </div>
+          <div class="Mobi-dis-Topic">
+            
+          </div>
+          <div class="label-layouts">
+            <div style="text-align: right; color: #0099CC; font-size: 24px; line-height: 30px; font-weight: 700; padding-right: 10px; border-right: 1px solid #9F9F9F">Emerging<br/>
+              issues</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 13px">
+              <span><img style="display: inline-block" class="img-fluid" src="./Assets/up-arrow-icon.png"><p style="vertical-align: bottom; margin: 0;display: inline-block; font-size: 18px; line-height: 23px;">Growing interest among stakeholders</p></span>
+              <span><img style="display: inline-block" class="img-fluid" src="./Assets/right-arrow-icon.png"><p style="vertical-align: bottom; margin: 0;display: inline-block; font-size: 18px; line-height: 23px;">Growing relevance to the business strategy</p></span>
+              <span><img style="display: inline-block" class="img-fluid" src="./Assets/diagonal-arrow-icon.png"><p style="vertical-align: bottom; margin: 0;display: inline-block; font-size: 18px; line-height: 23px;">Growing priority among stakeholders and growing relevance to business strategy</p></span>
+            </div>
+          </div>
+          <!-- content that needs to be highlighted -->
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item creator" id="id1">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  <span><img class="img-fluid" src="./Assets/1.png"/></span>Business ethics and integrity
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Meeting the highest compliance and anti-corruption standards. Promoting integrity throughout Atlas 
+Copco to fight corruption and fraud through education, training and processes to identify and 
+manage risks in our own operations and downstream commercial relationships. Promoting the 
+independent reporting of suspected misconduct and thorough investigation of those reports.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item creator" id="id2">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                <span><img class="img-fluid" src="./Assets/2.png"/></span>Product quality and service
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Ensuring all products and services meet customer expectations on safety, quality and ergonomics 
+and comply with relevant safety regulations
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item creator" id="id3">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                <span><img class="img-fluid" src="./Assets/3.png"/></span>Life-cycle approach to product development
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Creating industry-leading products and services that meet and exceed our customers’ expectations 
+and needs, by applying a life-cycle approach to use more sustainable materials and improve 
+recyclability, performance and efficiency
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item creator" id="id4">
+                <h2 class="accordion-header" id="headingFour">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                  <span><img class="img-fluid" src="./Assets/4_new.png"/></span>Product carbon impact
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFour"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Helping customers increase their energy efficiency and reduce their carbon emissions
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item creator" id="id5">
+                <h2 class="accordion-header" id="headingFive">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive"
+                    aria-expanded="false"
+                    aria-controls="collapseFive"
+                  >
+                  <span><img class="img-fluid" src="./Assets/5_new.png"/></span>Occupational health, safety and well-being                  </button>
+                </h2>
+                <div
+                  id="collapseFive"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFive"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Upholding best practices in health, safety and well-being to positively affect the well-being of our 
+employees
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item trust" id="id6">
+                <h2 class="accordion-header" id="headingSix">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseSix"
+                    aria-expanded="false"
+                    aria-controls="collapseSix"
+                  >
+              <span><img class="img-fluid" src="./Assets/6.png"/></span>Life-cycle approach to product development
+                  </button>
+                </h2>
+                <div
+                  id="collapseSix"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingSix"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Creating industry-leading products and services that meet and exceed our customers’ expectations 
+and needs, by applying a life-cycle approach to use more sustainable materials and improve 
+recyclability, performance and efficiency. <button class="openBtn" data-bs-toggle="modal" data-bs-target="#myModal" data-url="content.html">Learn More</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item trust" id="id7">
+                <h2 class="accordion-header" id="headingSeven">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseSeven"
+                    aria-expanded="false"
+                    aria-controls="collapseSeven"
+                  >
+              <span><img class="img-fluid" src="./Assets/7_new.png"/></span>Responsible value chain
+                  </button>
+                </h2>
+                <div
+                  id="collapseSeven"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingSeven"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Regularly assessing business partners on environmental, health, safety, labor, and ethical practices. 
+                      Working with business partners with high sustainability performance.<button>Learn More</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item trust" id="id8">
+                <h2 class="accordion-header" id="headingEight">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseEight"
+                    aria-expanded="false"
+                    aria-controls="collapseEight"
+                  >
+              <span><img class="img-fluid" src="./Assets/8.png"/></span>Climate impact along the value chain
+                  </button>
+                </h2>
+                <div
+                  id="collapseEight"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingEight"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Actively promoting and achieving CO2 reductions beyond our direct control, including sustainable logistics and transport.
+
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item trust" id="id9">
+                <h2 class="accordion-header" id="headingNine">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseNine"
+                    aria-expanded="false"
+                    aria-controls="collapseNine"
+                  >
+              <span><img class="img-fluid" src="./Assets/9_new.png"/></span>Human rights
+                  </button>
+                </h2>
+                <div
+                  id="collapseNine"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingNine"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Respecting and protecting human rights and mitigating these impacts throughout our value chain. 
+This includes non-discrimination, as well as tracing impacts beyond our direct control to ensure that 
+child labor and human trafficking do not occur within our sphere of influence
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item trust" id="id10">
+                <h2 class="accordion-header" id="headingTen">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTen"
+                    aria-expanded="false"
+                    aria-controls="collapseTen"
+                  >
+              <span><img class="img-fluid" src="./Assets/10_new.png"/></span>Data protection and privacy
+                  </button>
+                </h2>
+                <div
+                  id="collapseTen"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTen"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Protecting personal data and respecting the right to privacy. Collecting, using and processing
+                    personal and customer data proportionally, responsibly and lawfully. Designing products and 
+                    services to have appropriate safeguards to protect personal data against unauthorized use or 
+                    disclosure.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item strategic" id="id11">
+                <h2 class="accordion-header" id="headingEleven">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseEleven"
+                    aria-expanded="false"
+                    aria-controls="collapseEleven"
+                  >
+                   <span><img class="img-fluid" src="./Assets/11_new.png"/></span>Diversity and Inclusion
+                  </button>
+                </h2>
+                <div
+                  id="collapseEleven"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingEleven"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Establishing a workplace where all employees are treated fairly and with dignity, without 
+                    discrimination in opportunities or pay and benefits. Ensuring that the company workforce reflects 
+                    the diversity of the society in which we operate, and that the company maintains a culture of 
+                    respect, including raising awareness of and preventing harassment.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item strategic" id="id12">
+                <h2 class="accordion-header" id="headingTwelve">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwelve"
+                    aria-expanded="false"
+                    aria-controls="collapseTwelve"
+                  >
+                   <span><img class="img-fluid" src="./Assets/12_new.png"/></span>Talent development and retention
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwelve"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwelve"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Promoting lifelong learning to stimulate the professional and personal development of our people. 
+Ensuring a two-way dialogue and continuous and constructive feedback with the aim of enabling 
+the full potential of our people
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item strategic" id="id13">
+                <h2 class="accordion-header" id="headingThirteen">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThirteen"
+                    aria-expanded="false"
+                    aria-controls="collapseThirteen"
+                  >
+                   <span><img class="img-fluid" src="./Assets/13_new.png"/></span>Gender balance in leadership positions
+                  </button>
+                </h2>
+                <div
+                  id="collapseThirteen"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThirteen"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Striving for gender balance and increased female representation in leadership positions.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item strategic" id="id14">
+                <h2 class="accordion-header" id="headingFourteen">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFourteen"
+                    aria-expanded="false"
+                    aria-controls="collapseFourteen"
+                  >
+                   <span><img class="img-fluid" src="./Assets/14_new.png"/></span>Circular business models
+                  </button>
+                </h2>
+                <div
+                  id="collapseFourteen"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFourteen"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Applying a life-cycle approach to developing business models, optimizing opportunities to replace, 
+                    reduce, reuse, repurpose and recycle materials and products.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item material" id="id15">
+                <h2 class="accordion-header" id="headingfifteen">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapsefifteen"
+                    aria-expanded="false"
+                    aria-controls="collapsefifteen"
+                  >
+                   <span><img class="img-fluid" src="./Assets/15.png"/></span>Material traceability and sourcing
+                  </button>
+                </h2>
+                <div
+                  id="collapsefifteen"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingfifteen"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Ensuring responsible sourcing of materials and components. 
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item material" id="id16">
+                <h2 class="accordion-header" id="headingSixteen">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseSixteen"
+                    aria-expanded="false"
+                    aria-controls="collapseSixteen"
+                  >
+                   <span><img class="img-fluid" src="./Assets/16.png"/></span>Labor rights
+                  </button>
+                </h2>
+                <div
+                  id="collapseSixteen"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingSixteen"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Respecting and protecting labor rights and mitigating these impacts throughout our value chain. 
+                    This includes ensuring decent wages, compliance with work hour regulations, and freedom of 
+                    association.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item material" id="id17">
+                <h2 class="accordion-header" id="headingSeventeen">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseSeventeen"
+                    aria-expanded="false"
+                    aria-controls="collapseSeventeen"
+                  >
+                   <span><img class="img-fluid" src="./Assets/17.png"/></span>Gender pay equity
+                  </button>
+                </h2>
+                <div
+                  id="collapseSeventeen"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingSeventeen"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Ensuring equal pay for equal work.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item material" id="id18">
+                <h2 class="accordion-header" id="headingEighteen">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseEighteen"
+                    aria-expanded="false"
+                    aria-controls="collapseEighteen"
+                  >
+                   <span><img class="img-fluid" src="./Assets/18.png"/></span>Natural environments and ecosystems
+                  </button>
+                </h2>
+                <div
+                  id="collapseEighteen"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingEighteen"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Ensuring that our products and ways of working protect and do not negatively impact nature or 
+contribute to loss of species.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item material" id="id19">
+                <h2 class="accordion-header" id="headingNineteen">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapsefifteen"
+                    aria-expanded="false"
+                    aria-controls="collapsefifteen"
+                  >
+                   <span><img class="img-fluid" src="./Assets/19_new.png"/></span>Multi-stakeholder collaboration
+                  </button>
+                </h2>
+                <div
+                  id="collapsefifteen"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingNineteen"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Fostering long-term partnerships with academia, NGOs, start-ups, social entrepreneurs and industry 
+peers, to act on sustainability challenges.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item material" id="id20">
+                <h2 class="accordion-header" id="headingTwenty">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwenty"
+                    aria-expanded="false"
+                    aria-controls="collapseTwenty"
+                  >
+                   <span><img class="img-fluid" src="./Assets/20.png"/></span>Responsible tax policy
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwenty"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwenty"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Fostering long-term partnerships with academia, NGOs, start-ups, social entrepreneurs and industry 
+peers, to act on sustainability challenges.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item material" id="id21">
+                <h2 class="accordion-header" id="headingTwentyone">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwentyone"
+                    aria-expanded="false"
+                    aria-controls="collapseTwentyone"
+                  >
+                   <span><img class="img-fluid" src="./Assets/21.png"/></span>Water use
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwentyone"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwentyone"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Sustainable management of water resources within direct operations and in the supply chain.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item material" id="id22">
+                <h2 class="accordion-header" id="headingTwentytwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwentytwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwentytwo"
+                  >
+                  <span><img class="img-fluid" src="./Assets/22_new.png"/></span>Community engagement
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwentytwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwentytwo"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Supporting NGOs and charitable organizations for underserved communities.
+                  </div>
+                </div>
+              </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- modal popup -->
+
+    <div class="modal" tabindex="-1" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+          
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+ -->
+  </body>
+</html>
