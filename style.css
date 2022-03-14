@@ -1,0 +1,343 @@
+*{
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+}
+.chart-wrapper {
+  position: relative;
+  /* border: 1px solid red; */
+}
+.checkbox-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+}
+.checkbox-wrapper div{
+  /* flex: 1; */
+  padding: 0 12px;
+}
+.info:hover{
+  border: 2px solid red;
+}
+.checkbox-wrapper label{
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #707070;
+}
+.creator-filter label{
+  color: #F26522;
+}
+.checkbox-wrapper input[type=checkbox]{
+  position: relative;
+  cursor: pointer;
+}
+.checkbox-wrapper input[type=checkbox]:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #707070;
+}
+.creator-filter input[type=checkbox]:after{
+  border: 2px solid #F26522;
+}
+.trust-filter label{
+  color: #6D2077;
+}
+.trust-filter input[type=checkbox]:after{
+  border: 2px solid #6D2077;
+}
+.strategic-filter label{
+  color: #43B02A;
+}
+.strategic-filter input[type=checkbox]:after{
+  border: 2px solid #43B02A;
+}
+.material-filter label{
+  color: #0078A1;
+}
+.material-filter input[type=checkbox]:after{
+  border: 2px solid #0078A1;
+}
+.hori-text, .vert-text{
+  color: #0099CC;
+  font-size: 12px;
+  font-weight: 600;
+  position: absolute;
+  width: 100%;
+  margin: 0;
+}
+.hori-text{
+  bottom: -24px;
+  width: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+}
+.vert-text{
+  bottom: 12%;
+  width: unset;
+  transform-origin: 0 0;
+  transform: rotate(-90deg);
+}
+.chart-axis {
+  border-left: 3px solid #0099cc;
+  border-bottom: 3px solid #0099cc;
+  width: 89.5%;
+  height: 88%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.chart {
+  width: 87.5%;
+  padding-bottom: 50.25%;
+  /* height: 500px; */
+
+  position: absolute;
+  background-color: rgba(204, 204, 204, 0.11);
+  top: 4%;
+  right: 2%;
+}
+.overlay-column,
+.overlay-row {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  z-index: 1;
+}
+.overlay-row {
+  flex-direction: column;
+}
+.overlay-column .dotted-border {
+  border-right: 1px dotted rgb(85, 83, 83);
+  flex: 1;
+  font-size: 12px;
+}
+.overlay-column .dotted-border:last-child {
+  border: none;
+}
+.overlay-row .dotted-border {
+  border-right: none;
+  border-bottom: 1px dotted rgb(85, 83, 83);
+  flex: 1;
+  font-size: 12px;
+}
+.overlay-row .dotted-border:last-child {
+  border: none;
+}
+
+.chart-axis .overlay-column {
+  width: 98.5%;
+  height: 4%;
+  right: 2%;
+  bottom: 0;
+  transform: translateY(100%);
+}
+.chart-axis .overlay-column .dotted-border {
+  border-right: 3px solid #0099cc;
+  text-align: right;
+  padding: 5px;
+}
+.chart-axis .overlay-column .dotted-border:last-child {
+  border-right: 3px solid #0099cc;
+}
+
+.chart-axis .overlay-row {
+  width: 4%;
+  height: 96%;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-100%);
+  flex-direction: column-reverse;
+}
+.chart-axis .overlay-row .dotted-border {
+  border-top: 3px solid #0099cc;
+  border-bottom: none;
+  text-align: right;
+  /* padding: 5px; */
+}
+.chart-axis .overlay-row .dotted-border:last-child {
+  border-top: 3px solid #0099cc;
+}
+.numberY {
+  position: absolute;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.overlay-points {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+.overlay-points span {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  transform: translate(-50%, 50%);
+}
+.overlay-points span:hover {
+  transform: translate(-50%, 50%) scale(1.2);
+}
+.overlay-points img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(0.5);
+  /* z-index: 1;; */
+}
+.markerBorder {
+  /* content: ""; */
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  right: calc(100% - 27%);
+  /* top: calc(100% - 17%); */
+  border: 1px dashed black;
+  border-bottom: none;
+  border-left: none;
+  z-index: 2;
+  visibility: hidden;
+}
+.goRight:after,
+.goCorner:after,
+.goTop:after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  /* border: 1px solid black; */
+  position: absolute;
+  background: url(./Assets/right-arrow-icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: 0;
+  top: 50%;
+  transform: translate(30%, -50%) scale(0.5) rotate(0);
+  z-index: -1;
+}
+.goCorner:after {
+  right: 50%;
+  transform: translate(75%, -92%) scale(0.5) rotate(-45deg);
+}
+
+.goTop:after {
+  right: 50%;
+  transform: translate(50%, -100%) scale(0.5) rotate(-90deg);
+}
+.label-layouts{
+  border-top: 1px dashed #BBBDC0;
+  margin-top: 32px;
+  padding: 32px 0;
+  display: flex;
+  gap: 13px;
+}
+.accordion-item{
+  border: none;
+}
+.accordion-button{
+  padding: 8px 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  background-color: transparent;
+}
+.accordion-button:focus{
+  border: none;
+}
+.accordion-button:not(.collapsed){
+  background-color: white;
+  border: none;
+  box-shadow: none;
+}
+.accordion-button span{
+  padding-right: 12px;
+  
+}
+.accordion-button span img{
+  max-width: 20px;
+}
+.popover1{
+  border: 2px solid black!important;
+}
+.popover{
+  position: absolute;
+  left: 50%!important;
+  /* top: 20px !important;; */
+  max-width: 100%;
+  width: 1296px;
+  border-radius: 0!important;
+  border: none;
+  
+  transform: translate(-50%, 55px)!important;
+}
+.popover-body{
+ font-size: 16px;
+ padding: 30px 0;
+ width: 789px;
+ border-top: 1px solid orange;
+  border-bottom: 1px solid orange;
+}
+.popover-arrow{
+  display: none!important;
+}
+@media screen and (min-width: 767px) {
+  .overlay-points img {
+    transform: scale(0.7);
+  }
+  .goRight:after {
+    transform: translate(50%, -50%) scale(0.7) rotate(0);
+  }
+
+  .goCorner:after {
+    transform: translate(87%, -100%) scale(0.7) rotate(-45deg);
+  }
+  .goTop:after {
+    /* right: 50%; */
+    top: 40%;
+    transform: translate(50%, -100%) scale(0.7) rotate(-90deg);
+  }
+  .overlay-row .dotted-border, .overlay-column .dotted-border {
+    font-size: 16px;
+  }
+  .hori-text, .vert-text{
+    font-size: 16px;
+  }
+  .vert-text{
+    bottom: 25%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .overlay-points img {
+    transform: scale(1);
+  }
+  .goRight:after,
+  .goCorner:after,
+  .goTop:after {
+    transform: translate(90%, -50%) scale(1);
+  }
+
+  .goCorner:after {
+    top: 35%;
+    transform: translate(90%, -100%) scale(1) rotate(-45deg);
+  }
+
+  .goTop:after {
+    /* right: 50%; */
+    top: 30%;
+    transform: translate(50%, -100%) scale(1) rotate(-90deg);
+  }
+  .vert-text{
+    bottom: 35%;
+  }
+}
